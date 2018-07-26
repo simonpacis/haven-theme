@@ -14,9 +14,9 @@
 
 get_header();
 ?>
-<link rel="stylesheet" href="//haven.menuras.com/wp-content/themes/understrap/css/custom.css">
+<link rel="stylesheet" href="/wp-content/themes/understrap/css/custom.css">
 <nav class="bg-fadeout navbar navbar-expand-md navbar-dark navbar-trans fixed-top navbar-inverse pl-5 pr-5 pt-3 pb-4">
-    <a href="/" class="navbar-brand"><img src="https://haven.menuras.com/wp-content/uploads/haven-logo-white.png"></a>
+    <a href="/" class="navbar-brand"><img src="/wp-content/uploads/haven-logo-white.png"></a>
 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar7" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="icon-bar top-bar"></span>
           <span class="icon-bar middle-bar"></span>

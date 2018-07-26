@@ -15,7 +15,7 @@ get_header();
 ?>
 
 <nav class="navbar navbar-expand-md navbar-dark navbar-trans fixed-top navbar-inverse pl-5 pr-5 pt-3">
-    <a href="/" class="navbar-brand"><img src="https://haven.menuras.com/wp-content/uploads/haven-logo-white.png"></a>
+    <a href="/" class="navbar-brand"><img src="/wp-content/uploads/haven-logo-white.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar7">
         <span class="navbar-toggler-icon"></span>
     </button>
