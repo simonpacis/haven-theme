@@ -29,9 +29,9 @@ if ( ! function_exists( 'tailor_shortcode_custom_content_element' ) ) {
 	    }
 
 	    $outer_html = '<div class="fluid-container">
-<div class="row  m-5">
-  <div ' . trim( "{$id} class=\"col-md-8 offset-md-2 p-lg-5 {$class}\"" ) . '>
-    <h1><div ' . trim( "{$id} class=\"{$class}\"" ) . '>%s</h1>
+<div class="row greyborder">
+  <div ' . trim( "{$id} class=\"col-md-8 offset-md-2 p-5 {$class}\"" ) . '>
+    <h1 class="text-center"><div ' . trim( "{$id} class=\"{$class}\"" ) . '>%s</h1>
   </div>
 </div>
 </div>';

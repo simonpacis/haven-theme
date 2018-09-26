@@ -26,10 +26,11 @@ $container = get_theme_mod( 'understrap_container_type' );
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
 	<?php wp_head(); ?>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
 
 	<link rel="stylesheet" href="/wp-content/themes/understrap/css/frontpage.css">
 	<script src="/wp-content/themes/understrap/js/dotimeout.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.js"></script>
 </head>
 
 <body <?php body_class(); ?>>

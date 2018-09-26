@@ -42,6 +42,7 @@ if ( class_exists( 'Tailor_Element' ) && ! class_exists( 'Tailor_Image_With_Text
 			    'section'               =>  'general',
 			    'priority'              =>  $priority = 11,
 		    ) );
+
 		    $this->add_setting( 'setting_2', array(
 			    'sanitize_callback'     =>  'tailor_sanitize_text',
 			    'default'               =>  'Headline text here',
@@ -53,6 +54,54 @@ if ( class_exists( 'Tailor_Element' ) && ! class_exists( 'Tailor_Image_With_Text
 			    'priority'              =>  $priority = 10,
 		    ) );
 
+		    $this->add_setting( 'setting_3', array(
+			    'sanitize_callback'     =>  'tailor_sanitize_text',
+			    'default'               =>  '',
+		    ) );
+		    $this->add_control( 'setting_3', array(
+			    'label'                 =>  __( 'Button 1 text', '' ),
+			    'type'                  =>  'text',
+			    'section'               =>  'general',
+			    'priority'              =>  $priority = 12,
+		    ) );
+
+		    $this->add_setting( 'setting_4', array(
+			    'sanitize_callback'     =>  'tailor_sanitize_text',
+			    'default'               =>  '',
+		    ) );
+		    $this->add_control( 'setting_4', array(
+			    'label'                 =>  __( 'Button 1 link', '' ),
+			    'type'                  =>  'text',
+			    'section'               =>  'general',
+			    'priority'              =>  $priority = 13,
+		    ) );
+
+		    $this->add_setting( 'setting_5', array(
+			    'sanitize_callback'     =>  'tailor_sanitize_text',
+			    'default'               =>  '',
+		    ) );
+		    $this->add_control( 'setting_5', array(
+			    'label'                 =>  __( 'Button 2 text', '' ),
+			    'type'                  =>  'text',
+			    'section'               =>  'general',
+			    'priority'              =>  $priority = 14,
+		    ) );
+
+		    $this->add_setting( 'setting_6', array(
+			    'sanitize_callback'     =>  'tailor_sanitize_text',
+			    'default'               =>  '',
+		    ) );
+		    
+		    $this->add_control( 'setting_6', array(
+			    'label'                 =>  __( 'Button 2 link', '' ),
+			    'type'                  =>  'text',
+			    'section'               =>  'general',
+			    'priority'              =>  $priority = 15,
+		    ) );
+
+
+
+
 		    $this->add_setting( 'bgimg', array(
 		    	'sanitize_callback'		=>	'tailor_sanitize_text',
 			    'default'               =>  '',
@@ -62,7 +111,7 @@ if ( class_exists( 'Tailor_Element' ) && ! class_exists( 'Tailor_Image_With_Text
 			    'label'                 =>  __( 'Image', '' ),
 			    'type'                  =>  'image',
 			    'section'               =>  'general',
-			    'priority'              =>  $priority = 12,
+			    'priority'              =>  $priority = 16,
 		    ) );
 		    $this->add_setting( 'id', array(
 		    	'sanitize_callback'		=>	'tailor_sanitize_text',

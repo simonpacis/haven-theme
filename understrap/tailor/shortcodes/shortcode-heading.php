@@ -27,7 +27,7 @@ if ( ! function_exists( 'tailor_shortcode_heading_element' ) ) {
 	    
 	    $outer_html = '
 <div '.$id.' class="'.$class.' row">
-  <div class="col-md-12 p-5 text-center">
+  <div class="col-md-12 pb-3 pt-3 text-center">
     <h1>'.$heading.'</h1>
   </div>
 </div>';

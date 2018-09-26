@@ -14,9 +14,9 @@
 
 get_header();
 ?>
-<link rel="stylesheet" href="/wp-content/themes/understrap/css/custom.css">
-<nav class="bg-fadeout navbar navbar-expand-md navbar-dark navbar-trans fixed-top navbar-inverse pl-5 pr-5 pt-3 pb-4">
-    <a href="/" class="navbar-brand"><img src="/wp-content/uploads/haven-logo-white.png"></a>
+<link rel="stylesheet" href="//haven-aarhus.dk/wp-content/themes/understrap/css/custom.css">
+<nav class="bg-fadeout navbar navbar-expand-md navbar-dark navbar-trans fixed-top navbar-inverse pl-5 pr-5 pt-2 pb-3">
+    <a href="/" class="navbar-brand"><img src="https://haven.menuras.com/wp-content/uploads/haven-logo-white.png"></a>
 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar7" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="icon-bar top-bar"></span>
           <span class="icon-bar middle-bar"></span>
@@ -36,6 +36,9 @@ wp_nav_menu( array(
 ) );
     ?>
 </nav>
+<div class="pb-5 showineditor" id="showineditor" style="display:none;background-color:black;">&nbsp;</div>
+<div class="pb-5 pl-5 pt-3 showineditor" id="showineditor" style="display:none;background-color:black;color:white;">This black bar is only visible in the editor.</div>
+
 <script>
   var opened = false;
   jQuery('#navbar7').on('show.bs.collapse', function() {
@@ -77,7 +80,64 @@ wp_nav_menu( array(
   });
 
 
-  jQuery(".onemenu").append('            <li class="nav-item">                <a class="nav-link" href="#">&nbsp;</a>            </li>            <li class="nav-item">                <a href="https://www.facebook.com/HavenAarhus/" class="nav-link no-side-pad"><i class="fab fa-twitter"></i></a>            </li>            <li class="nav-item">                <a href="https://www.facebook.com/HavenAarhus" target="_blank" class="nav-link no-side-pad"><i class="fab fa-facebook"></i></a>            </li>            <li class="nav-item">                <!--<a href="https://www.facebook.com/HavenAarhus/" class="nav-link no-side-pad"><i class="fas fa-calendar"></i></a>-->            </li>');
+
+
+  jQuery(".onemenu").append('            <li class="nav-item">                <a class="nav-link" href="#">&nbsp;</a>            </li>            <li class="nav-item">                <a href="https://www.facebook.com/HavenAarhus" target="_blank" class="nav-link no-side-pad"><i class="fab fa-facebook"></i></a>            </li><li class="nav-item">                <a href="https://www.instagram.com/haven.aarhus/" target="_blank" class="nav-link no-side-pad"><i class="fab fa-instagram"></i></a>            </li><li class="nav-item">                <a href="https://havenaarhus.breezechms.com/embed/calendar/grid?size=medium&color=gray&calendars=SkiBQ0rKB8NqgyE862Gamo4QEngYDXl1aH5F7zWvbzWqOeJM%2Fjed%2FYc2wsuQrRubJbrhe3FUJQ5ByRYXomxRGA%3D%3D" target="_blank" class="nav-link no-side-pad"><i class="fas fa-calendar"></i></a>            </li><li class="nav-item">                <a href="javascript:void(0);" onclick="openModal(\'contactmodal\')" target="_blank" class="nav-link no-side-pad"><i class="fas fa-comment"></i></a>            </li>                        ');
+
+
+  jQuery(document).ready(function(){
+    if(jQuery(window).width() > 768)
+    {
+      jQuery(".partnerbox").css("flex", "none");
+    }
+
+  });
+
+</script>
+
+<div class="modal" tabindex="-1" role="dialog" id="contactmodal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title col-md-6 offset-md-3">Kontakt os</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="col-md-6 offset-md-3">
+        Har du et spørgsmål? Vi ville elske at komme i kontakt med dig!
+<form action="/#wpcf7-f119-p42-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="119">
+<input type="hidden" name="_wpcf7_version" value="5.0.4">
+<input type="hidden" name="_wpcf7_locale" value="da_DK">
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f119-p42-o1">
+<input type="hidden" name="_wpcf7_container_post" value="42">
+</div>
+<p><label> Navn<br>
+    <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span> </label></p>
+<p><label> Alder<br>
+    <span class="wpcf7-form-control-wrap your-age"><input type="number" name="your-age" value="" class="wpcf7-form-control wpcf7-number wpcf7-validates-as-required wpcf7-validates-as-number" aria-required="true" aria-invalid="false"></span> </label></p>
+<p><label> Telefonnummer<br>
+    <span class="wpcf7-form-control-wrap your-phone"><input type="number" name="your-phone" value="" class="wpcf7-form-control wpcf7-number wpcf7-validates-as-required wpcf7-validates-as-number" aria-required="true" aria-invalid="false"></span> </label></p>
+<p><label> Email<br>
+    <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false"></span> </label></p>
+<p><label> Kommentarer<br>
+    <span class="wpcf7-form-control-wrap your-comments"><textarea name="your-comments" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span> </label></p>
+<p><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></p>
+<div class="wpcf7-response-output wpcf7-display-none"></div></form>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+openModal = function(modalid)
+{
+  console.log(modalid);
+  jQuery("#"+modalid).appendTo("body").modal();
+}
 </script>
 
         <?php while ( have_posts() ) : the_post(); ?>
@@ -203,4 +263,32 @@ if("<?php if(is_front_page()) { echo "true"; } else { echo "false"; } ?>" == "tr
     }
   });
 })(jQuery);
+
+var queryparams = location.search.replace('?', '').split('&').map(function(val){
+  return val.split('=');
+});
+
+if(queryparams[0][0] == "modal")
+{
+  setTimeout(function(){
+  jQuery("#"+queryparams[0][1]).modal();
+  }, 500);
+}
+
+jQuery(document).ready(function()
+{
+if(typeof Tailor.Api == "object")
+{
+  console.log("dhey");
+  jQuery('.showineditor').each(function() {
+  jQuery(this).show();
+});
+  
+} else {
+  console.log("hoy");
+  jQuery('.showineditor').each(function() {
+  jQuery(this).hide();
+});
+}
+});
 </script>

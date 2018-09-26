@@ -34,6 +34,10 @@ if ( ! function_exists( 'tailor_shortcode_haven_button_element' ) ) {
 	    	$button_text = "No text added";
 	    }
 	    $button_link = $atts['button_link'];
+		    if (strpos($button_link, 'js:') !== false) {
+		    	$button_link = 'javascript:void(0)" onclick="openModal(\''.substr($button_link, 3).'\');"';
+		    }
+
 	    $button_text = $atts['button_text'];
 	    $wrapper_class = $atts['wrapper_class'];
 	    $outer_html = "";

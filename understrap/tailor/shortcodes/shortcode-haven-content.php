@@ -24,10 +24,11 @@ if ( ! function_exists( 'tailor_shortcode_haven_content_element' ) ) {
 	    // Do something with the element settings
 	    $inner_html = '';
 	    $html_content = htmlspecialchars_decode(esc_attr($atts['html_content']));
+
 	    
 	    $outer_html = '
 <div '.$id.' class="'.$class.' row">
-  <div class="col-md-12 pb-5 pr-5 pl-5 text-center">
+  <div class="col-md-12 pb-2 pr-5 pl-5 text-center">
     '.$html_content.'
   </div>
 </div>';

@@ -89,6 +89,18 @@ register_nav_menus( array(
  * Loads the custom Tailor elements.
  */
 function tailor_load_custom_element() {
+	include trailingslashit( get_template_directory() ) . 'tailor/elements/class-modal.php';
+	include trailingslashit( get_template_directory() ) . 'tailor/shortcodes/shortcode-modal.php';
+
+
+	include trailingslashit( get_template_directory() ) . 'tailor/elements/class-html.php';
+	include trailingslashit( get_template_directory() ) . 'tailor/shortcodes/shortcode-html.php';
+
+	include trailingslashit( get_template_directory() ) . 'tailor/elements/class-fourbox.php';
+	include trailingslashit( get_template_directory() ) . 'tailor/shortcodes/shortcode-fourbox.php';
+
+	include trailingslashit( get_template_directory() ) . 'tailor/elements/class-timeline-image.php';
+	include trailingslashit( get_template_directory() ) . 'tailor/shortcodes/shortcode-timeline-image.php';
 	include trailingslashit( get_template_directory() ) . 'tailor/elements/class-three-image.php';
 	include trailingslashit( get_template_directory() ) . 'tailor/shortcodes/shortcode-three-image.php';
 
@@ -96,6 +108,8 @@ function tailor_load_custom_element() {
 	include trailingslashit( get_template_directory() ) . 'tailor/shortcodes/shortcode-haven-button.php';
 	include trailingslashit( get_template_directory() ) . 'tailor/elements/class-heading.php';
 	include trailingslashit( get_template_directory() ) . 'tailor/shortcodes/shortcode-heading.php';
+	include trailingslashit( get_template_directory() ) . 'tailor/elements/class-haven-content-twocol.php';
+	include trailingslashit( get_template_directory() ) . 'tailor/shortcodes/shortcode-haven-content-twocol.php';
 	include trailingslashit( get_template_directory() ) . 'tailor/elements/class-haven-content.php';
 	include trailingslashit( get_template_directory() ) . 'tailor/shortcodes/shortcode-haven-content.php';
 	include trailingslashit( get_template_directory() ) . 'tailor/elements/class-submenu.php';
@@ -201,10 +215,46 @@ function tailor_register_custom_element( $element_manager ) {
 	);
 
 	$element_manager->add_element(
+		'tailor_html',
+		array(
+			'label'             =>  __( 'HTML Content' ),             // Label displayed in the element list
+			'description'       =>  __( 'Insert HTML.' ),   // Description displayed in the element list
+			'badge'             =>  __( 'Haven' ),                     // Badge displayed in the element list
+		)
+	);
+
+	$element_manager->add_element(
 		'tailor_heading',
 		array(
 			'label'             =>  __( 'Heading' ),             // Label displayed in the element list
 			'description'       =>  __( 'A text heading.' ),   // Description displayed in the element list
+			'badge'             =>  __( 'Haven' ),                     // Badge displayed in the element list
+		)
+	);
+
+	$element_manager->add_element(
+		'tailor_fourbox',
+		array(
+			'label'             =>  __( 'Partners' ),             // Label displayed in the element list
+			'description'       =>  __( 'Partner fourbox.' ),   // Description displayed in the element list
+			'badge'             =>  __( 'Haven' ),                     // Badge displayed in the element list
+		)
+	);
+
+	$element_manager->add_element(
+		'tailor_modal',
+		array(
+			'label'             =>  __( 'Modal' ),             // Label displayed in the element list
+			'description'       =>  __( 'Add modal that button can then open.' ),   // Description displayed in the element list
+			'badge'             =>  __( 'Haven' ),                     // Badge displayed in the element list
+		)
+	);	
+
+	$element_manager->add_element(
+		'tailor_timeline_image',
+		array(
+			'label'             =>  __( 'Timeline image' ),             // Label displayed in the element list
+			'description'       =>  __( 'Element entry for timeline construction.' ),   // Description displayed in the element list
 			'badge'             =>  __( 'Haven' ),                     // Badge displayed in the element list
 		)
 	);
@@ -217,6 +267,16 @@ function tailor_register_custom_element( $element_manager ) {
 			'badge'             =>  __( 'Haven' ),                     // Badge displayed in the element list
 		)
 	);
+
+	$element_manager->add_element(
+		'tailor_haven_content_twocol',
+		array(
+			'label'             =>  __( 'Text content (two columns)' ),             // Label displayed in the element list
+			'description'       =>  __( 'Body text.' ),   // Description displayed in the element list
+			'badge'             =>  __( 'Haven' ),                     // Badge displayed in the element list
+		)
+	);
+
 
 	$element_manager->add_element(
 		'tailor_haven_button',

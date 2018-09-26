@@ -35,9 +35,15 @@ if ( ! function_exists( 'tailor_shortcode_haven_hero_element' ) ) {
 	    }
 	    if ( ! empty( $atts['setting_2'] ) ) {
 		    $setting_2 =  '' . esc_attr( $atts['setting_2'] ) . '';
+		    if (strpos($setting_2, 'js:') !== false) {
+		    	$setting_2 = 'javascript:void(0)" onclick="openModal(\''.substr($setting_2, 3).'\');"';
+		    }
 	    }
 	    if ( ! empty( $atts['setting_3'] ) ) {
 		    $setting_3 =  '' . esc_attr( $atts['setting_3'] ) . '';
+		    if (strpos($setting_3, 'js:') !== false) {
+		    	$setting_3 = 'javascript:void(0)" onclick="openModal(\''.substr($setting_3, 3).'\');"';
+		    }
 	    }
 	    if ( ! empty( $atts['setting_4'] ) ) {
 		    $setting_4 =  '' . esc_attr( $atts['setting_4'] ) . '';
@@ -61,9 +67,9 @@ if ( ! function_exists( 'tailor_shortcode_haven_hero_element' ) ) {
 	    }
 		$bgimg = wp_get_attachment_url( $atts['bgimg'] );
 	    $outer_html = '
-<div '.$id.' class="jumbotron bg text-white '.$class.'" style="background-image: url('.$bgimg.') !important;">
-  <div class="container text-left h-100" style="margin-top: 10rem !important;">
-  	<div class="row h-100">
+<div '.$id.' class="jumbotron flex flex-center bg text-white '.$class.'" style="background-image: url('.$bgimg.') !important;">
+  <div class="container text-left">
+  	<div class="row">
   		<div class="col-md-8">
 		    <p class="lead mb-3">'.$setting_1.'</p>  	
 		    <a href="'.$setting_2.'" class="btn btn-outline-light no-rounded">'.$setting_4.'</a>';
@@ -73,9 +79,7 @@ if ( ! function_exists( 'tailor_shortcode_haven_hero_element' ) ) {
 		    		$outer_html .= '<a href="'.$setting_3.'" class="no-rounded ml-2 btn btn-outline-light">'.$setting_5.'</a>';
 		    	}
 
-      $outer_html .= '<div class="col-md-6 offset-md-6 mt-5">
-        <p class="text-center col-md-12 mx-auto animated infinite pulse" style="margin-top: 340%;"><i class="material-icons" style="font-size: 6rem;">arrow_drop_down</i></p>
-      </div>		    
+      $outer_html .= '	    
   		</div>
   	</div>
   </div>

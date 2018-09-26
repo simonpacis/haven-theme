@@ -53,6 +53,51 @@ if ( class_exists( 'Tailor_Element' ) && ! class_exists( 'Tailor_Image_Slide_Ele
 			    'priority'              =>  $priority = 10,
 		    ) );
 
+		    $this->add_setting( 'setting_3', array(
+			    'sanitize_callback'     =>  'tailor_sanitize_text',
+			    'default'               =>  '',
+		    ) );
+		    $this->add_control( 'setting_3', array(
+			    'label'                 =>  __( 'Link 1 text', '' ),
+			    'type'                  =>  'text',
+			    'section'               =>  'general',
+			    'priority'              =>  $priority += 10,
+		    ) );
+
+		    $this->add_setting( 'setting_4', array(
+			    'sanitize_callback'     =>  'tailor_sanitize_text',
+			    'default'               =>  '',
+		    ) );
+		    $this->add_control( 'setting_4', array(
+			    'label'                 =>  __( 'Link 1 URL', '' ),
+			    'type'                  =>  'text',
+			    'section'               =>  'general',
+			    'priority'              =>  $priority += 10,
+		    ) );
+
+		    $this->add_setting( 'setting_5', array(
+			    'sanitize_callback'     =>  'tailor_sanitize_text',
+			    'default'               =>  '',
+		    ) );
+		    $this->add_control( 'setting_5', array(
+			    'label'                 =>  __( 'Link 2 text', '' ),
+			    'type'                  =>  'text',
+			    'section'               =>  'general',
+			    'priority'              =>  $priority += 10,
+		    ) );
+
+		    $this->add_setting( 'setting_6', array(
+			    'sanitize_callback'     =>  'tailor_sanitize_text',
+			    'default'               =>  '',
+		    ) );
+		    $this->add_control( 'setting_6', array(
+			    'label'                 =>  __( 'Link 2 URL', '' ),
+			    'type'                  =>  'text',
+			    'section'               =>  'general',
+			    'priority'              =>  $priority += 10,
+		    ) );
+
+
 		    $this->add_setting( 'bgimg', array(
 		    	'sanitize_callback'		=>	'tailor_sanitize_text',
 			    'default'               =>  '',
@@ -62,7 +107,7 @@ if ( class_exists( 'Tailor_Element' ) && ! class_exists( 'Tailor_Image_Slide_Ele
 			    'label'                 =>  __( 'Background image', '' ),
 			    'type'                  =>  'image',
 			    'section'               =>  'general',
-			    'priority'              =>  $priority = 30,
+			    'priority'              =>  $priority += 30,
 		    ) );
 		    $this->add_setting( 'id', array(
 		    	'sanitize_callback'		=>	'tailor_sanitize_text',

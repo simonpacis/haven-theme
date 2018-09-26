@@ -13,7 +13,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php get_sidebar( 'footerfull' ); ?>
 
-<div class="wrapper" id="wrapper-footer">
+<div class="wrapper" id="wrapper-footer" style="padding-top: 0 !important; margin-top: -30px;">
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 
@@ -25,12 +25,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-							@Atlas
-								<span class="sep"> | </span>
 					
-							Vester Allé 15, 8000 Aarhus
+							Vester Allé 15, 8000 Aarhus (@Atlas)
 								<span class="sep"> | </span>
-							+45 XX XX XX XX
+							+45 31 75 83 41
 								<span class="sep"> | </span>
 							kontakt@haven-aarhus.dk
 					</div><!-- .site-info -->

@@ -2,6 +2,10 @@ html, body {
 	overflow-x: hidden !important;
 }
 
+* {
+	font-family: "Lato";
+}
+
 .jumbotron {
  width:100%;
   height: 100vh;
@@ -11,6 +15,10 @@ border-radius: 0px !important;
 .navbar-trans {
     background-color: rgba(0,0,0,0);
 	width: 100vw;
+}
+
+a.fourboxa:hover {
+	text-decoration: none !important;
 }
 
 a.navbar-brand, a.logo {
@@ -107,6 +115,17 @@ p {
 
 	height: calc(100vh - 74px) !important;
 }
+
+.fill-50-vh-fixed
+{
+
+	height: calc(50vh - 74px) !important;
+}
+
+.h-vh-50
+{
+	height: 50vh;
+}
 @media only screen and (min-width: 768px) {
  div.h-lg-100 {
  	height: 100% !important;
@@ -167,6 +186,10 @@ div.h-min-50 {
     background-position: bottom;
 }
 
+.bg-center {
+	background-position: center !important;
+}
+
 .nav-link {
 	letter-spacing: 0.75px;
 }
@@ -176,18 +199,32 @@ div.h-min-50 {
 	padding-right: 0px !important;
 }
 
+.box {
+	max-width: 600px;
+	
+	border-left: 1px solid #888888;
+	border-top: none;
+	border-right: 1px solid #888888;
+	border-bottom: none;
+}
+
 .box hr {
 	margin-top: 0 !important;
 	width: 40%;
-	border-top: 4px solid rgba(0,0,0,1);
+	border-top: 1px solid #888888;
 }
 
 .box-right-bottom
 {
-	bottom: 0;
+	bottom: -1px;
 	right: 0;
 	background: white;
-	min-height: 45%;
+	height: /*45%;*/404px;
+	border-top: 1px solid #888888 !important;
+}
+
+.greyborder {
+	border: 1px solid #888888 !important;
 }
 
 .box-right-top
@@ -195,15 +232,20 @@ div.h-min-50 {
 	top: 0;
 	right: 0;
 	background: white;
-	min-height: 45%;
+	/*min-height: 45%;*/
+	height: 370px;
+	border-bottom: 1px solid #888888 !important;
 }
+
 
 .box-left-bottom
 {
-	bottom: 0;
+	bottom: -1px;
 	left: 0;
 	background: white;
-	min-height: 45%;
+	/*min-height: 45%;*/
+	/*height: 404px;*/
+	border-top: 1px solid #888888 !important;
 }
 
 .box-left-top
@@ -211,7 +253,9 @@ div.h-min-50 {
 	top: 0;
 	left: 0;
 	background: white;
-	min-height: 45%;
+	/*height: 370px;*/
+	/*min-height: 45%;*/
+	border-bottom: 1px solid #888888 !important;
 }
 
 .box-top-border {
@@ -284,6 +328,11 @@ div.h-min-50 {
   margin-top: 4px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 100 !important;
+	color: #8c8c8c !important;
+}
+
 .icon-bar:nth-child(2) {
   width: 16px;
   transition: ease all .2s;
@@ -312,4 +361,93 @@ div.h-min-50 {
 .navbar-toggler:not(.collapsed) .icon-bar:nth-child(3) {
   transform: rotate(-45deg) translate(4px, -4px);
   transition: ease all .2s;
+}
+
+.modal-content {
+	border-radius: 0 !important;
+}
+
+.modal-title {
+	text-align: center;
+}
+
+.modal-dialog {
+	margin-bottom: 50px;
+}
+
+.bg-dark {
+	background-color: #AAAAAA !important;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-center {
+	align-items: center;
+	justify-content: center;
+}
+
+.wide-text {
+	letter-spacing: 1px;
+}
+
+.modal {
+	width: 100vw !important;
+}
+
+.modal-dialog
+{
+	width: 90vw !important;
+	margin: auto;
+	margin-top: 1rem;
+	max-width: 90vw !important;
+}
+
+.wpcf7-form {
+	margin-top: 20px;
+}
+
+.form-control, .wpcf7 .wpcf7-validation-errors, .wpcf7 input[type=color], .wpcf7 input[type=date], .wpcf7 input[type=datetime-local], .wpcf7 input[type=datetime], .wpcf7 input[type=email], .wpcf7 input[type=file], .wpcf7 input[type=month], .wpcf7 input[type=number], .wpcf7 input[type=range], .wpcf7 input[type=search], .wpcf7 input[type=submit], .wpcf7 input[type=tel], .wpcf7 input[type=text], .wpcf7 input[type=time], .wpcf7 input[type=url], .wpcf7 input[type=week], .wpcf7 select, .wpcf7 textarea
+{
+	margin-top: 5px;
+	border-radius: 0 !important;
+}
+
+.form-control:focus, .wpcf7 .wpcf7-validation-errors:focus, .wpcf7 input:focus[type=color], .wpcf7 input:focus[type=date], .wpcf7 input:focus[type=datetime-local], .wpcf7 input:focus[type=datetime], .wpcf7 input:focus[type=email], .wpcf7 input:focus[type=file], .wpcf7 input:focus[type=month], .wpcf7 input:focus[type=number], .wpcf7 input:focus[type=range], .wpcf7 input:focus[type=search], .wpcf7 input:focus[type=submit], .wpcf7 input:focus[type=tel], .wpcf7 input:focus[type=text], .wpcf7 input:focus[type=time], .wpcf7 input:focus[type=url], .wpcf7 input:focus[type=week], .wpcf7 select:focus, .wpcf7 textarea:focus
+{
+	border-color: black;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.wpcf7 input[type=submit]
+{
+	color: black !important;
+	border-color: black !important;
+}
+
+.wpcf7 input[type=submit]:hover {
+	background-color: black !important;
+	color: white !important;
+}
+
+
+.weight > div > p {
+	font-weight: 300 !important;
+}
+
+
+.tailor-ui .tailor-section {
+margin-bottom: 0 !important;
+	}
+
+@media only screen and (max-width: 768px) {
+.left-border-small {
+	border-left: 1px solid #AAAAAA !important;
+}
+}
+
+.flex-none {
+	flex: none !important;
 }

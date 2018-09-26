@@ -18,6 +18,12 @@ if ( ! function_exists( 'tailor_shortcode_three_image_element' ) ) {
 		    'heading_1'			=>	'',
 		    'heading_2'			=>	'',
 		    'heading_3'			=>	'',
+		    'mail_1'			=>	'',
+		    'mail_2'			=>	'',
+		    'mail_3'			=>	'',
+		    'subheading_1'			=>	'',
+		    'subheading_2'			=>	'',
+		    'subheading_3'			=>	'',
 		    'bgimg_1'			=>	'',
 		    'bgimg_2'			=>	'',
 		    'bgimg_3'			=>	'',		    
@@ -31,6 +37,12 @@ if ( ! function_exists( 'tailor_shortcode_three_image_element' ) ) {
 	    $heading_1 = $atts['heading_1'];
 	    $heading_2 = $atts['heading_2'];
 	    $heading_3 = $atts['heading_3'];
+	    $subheading_1 = $atts['subheading_1'];
+	    $subheading_2 = $atts['subheading_2'];
+	    $subheading_3 = $atts['subheading_3'];
+	    $mail_1 = $atts['mail_1'];
+	    $mail_2 = $atts['mail_2'];
+	    $mail_3 = $atts['mail_3'];
 	    $bgimg_1 = $atts['bgimg_1'];
 	    $bgimg_1 = wp_get_attachment_url( $atts['bgimg_1'] );
 	    $bgimg_2 = $atts['bgimg_2'];
@@ -38,21 +50,21 @@ if ( ! function_exists( 'tailor_shortcode_three_image_element' ) ) {
 	    $bgimg_3 = $atts['bgimg_3'];
 	    $bgimg_3 = wp_get_attachment_url( $atts['bgimg_3'] );
 	    $outer_html = '
-<div '.$id.' class="'.$class.' container h-min-100 fill-vh-fixed h-min-less-md-200">
-  <div class="row h-min-100">
-    <div class="col-md-12 h-min-100 p-5 text-center">
-            <div class="row h-min-100 text-center">
-            	<div class="col-md-3 mr-lg-5 offset-md-1 h-min-100">
-            		<div class="h-75  bg" style="background-image: url('.$bgimg_1.') !important;"></div>
-            		<p class="text-center mt-3">'.$heading_1.'</p>
+<div '.$id.' class="'.$class.' container h-min-less-md-200 pb-5">
+  <div class="row ">
+    <div class="col-md-12 pt-2 pl-5 pr-5 text-center">
+            <div class="row text-center">
+            	<div class="col-md-3 mr-lg-5 offset-md-1">
+            		<img src="'.$bgimg_1.'">
+            		<p class="text-center mt-3">'.$heading_1.'<br><small><span class="text-muted">'.$subheading_1.'</span></small><br><small><span class="text-muted"><a href="mailto:'.$mail_1.'">'.$mail_1.'</a></span></small></p>
             	</div>
-            	<div class="col-md-3 h-min-100">
-            		<div class="h-75  bg" style="background-image: url('.$bgimg_2.') !important;"></div>
-            		<p class="text-center mt-3">'.$heading_2.'</p>
+            	<div class="col-md-3 ">
+            		<img src="'.$bgimg_2.'">
+            		<p class="text-center mt-3">'.$heading_2.'<br><small><span class="text-muted">'.$subheading_2.'</span></small><br><small><span class="text-muted"><a href="mailto:'.$mail_2.'">'.$mail_2.'</a></span></small></p>
             	</div>
-            	<div class="col-md-3 ml-lg-5 h-min-100">
-            		<div class="h-75  bg" style="background-image: url('.$bgimg_3.') !important;"></div>
-            		<p class="text-center mt-3">'.$heading_3.'</p>
+            	<div class="col-md-3 ml-lg-5 ">
+            		<img src="'.$bgimg_3.'">
+            		<p class="text-center mt-3">'.$heading_3.'<br><small><span class="text-muted">'.$subheading_3.'</span></small><br><small><span class="text-muted"><a href="mailto:'.$mail_3.'">'.$mail_3.'</a></span></small></p>
             	</div>
             </div>
         </div>

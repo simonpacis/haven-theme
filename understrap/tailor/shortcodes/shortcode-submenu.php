@@ -42,7 +42,7 @@ if ( ! function_exists( 'tailor_shortcode_submenu_element' ) ) {
 	    for ($i=1; $i < 9; $i++) { 
 	    		if(!empty($atts['link_'.$i.'_1']))
 	    		{
-	    			$submenu_content .= '<a class="pt-3 pt-lg-0 pt-xl-0 d-lg-inline d-xl-inline d-block d-sm-block d-md-block" href="#'.str_replace("#", "", $atts['link_'.$i.'_2']).'"><h4 class="d-none d-block d-lg-none d-xl-none">'.$atts['link_'.$i.'_1'].'</h4><span class="d-none d-lg-inline d-xl-inline">'.$atts['link_'.$i.'_1'].'</span></a>';
+	    			$submenu_content .= '<a class="pt-3 pt-lg-0 pt-xl-0 d-lg-inline d-xl-inline d-block d-sm-block d-md-block" href="#'.str_replace("#", "", $atts['link_'.$i.'_2']).'"><strong><p class="wide-text text-muted d-none d-block d-lg-none d-xl-none">'.$atts['link_'.$i.'_1'].'</p><span class="wide-text text-muted d-none d-lg-inline d-xl-inline">'.$atts['link_'.$i.'_1'].'</span></strong></a>';
 	    			$subcount++;
 	    		}
 	    }

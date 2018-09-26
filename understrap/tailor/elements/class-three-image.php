@@ -44,6 +44,29 @@ if ( class_exists( 'Tailor_Element' ) && ! class_exists( 'Tailor_Three_Image_Ele
 			    'priority'              =>  $priority += 10,
 		    ) );
 
+		    $this->add_setting( 'subheading_1', array(
+			    'sanitize_callback'     =>  'tailor_sanitize_text',
+			    'default'               =>  '',
+		    ) );
+		    $this->add_control( 'subheading_1', array(
+			    'label'                 =>  __( 'Subheading 1 text', '' ),
+			    'type'                  =>  'text',
+			    'section'               =>  'general',
+			    'priority'              =>  $priority += 10,
+		    ) );
+
+		    $this->add_setting( 'mail_1', array(
+			    'sanitize_callback'     =>  'tailor_sanitize_text',
+			    'default'               =>  '',
+		    ) );
+		    $this->add_control( 'mail_1', array(
+			    'label'                 =>  __( 'Mail 1 text', '' ),
+			    'type'                  =>  'text',
+			    'section'               =>  'general',
+			    'priority'              =>  $priority += 10,
+		    ) );
+
+
 		    $this->add_setting( 'bgimg_1', array(
 		    	'sanitize_callback'		=>	'tailor_sanitize_text',
 			    'default'               =>  '',
@@ -65,6 +88,28 @@ if ( class_exists( 'Tailor_Element' ) && ! class_exists( 'Tailor_Three_Image_Ele
 			    'section'               =>  'general',
 			    'priority'              =>  $priority += 10,
 		    ) );
+		    $this->add_setting( 'subheading_2', array(
+			    'sanitize_callback'     =>  'tailor_sanitize_text',
+			    'default'               =>  '',
+		    ) );
+		    $this->add_control( 'subheading_2', array(
+			    'label'                 =>  __( 'Subheading 2 text', '' ),
+			    'type'                  =>  'text',
+			    'section'               =>  'general',
+			    'priority'              =>  $priority += 10,
+		    ) );
+
+		    $this->add_setting( 'mail_2', array(
+			    'sanitize_callback'     =>  'tailor_sanitize_text',
+			    'default'               =>  '',
+		    ) );
+		    $this->add_control( 'mail_2', array(
+			    'label'                 =>  __( 'Mail 2 text', '' ),
+			    'type'                  =>  'text',
+			    'section'               =>  'general',
+			    'priority'              =>  $priority += 10,
+		    ) );
+
 		    $this->add_setting( 'bgimg_2', array(
 		    	'sanitize_callback'		=>	'tailor_sanitize_text',
 			    'default'               =>  '',
@@ -86,6 +131,29 @@ if ( class_exists( 'Tailor_Element' ) && ! class_exists( 'Tailor_Three_Image_Ele
 			    'section'               =>  'general',
 			    'priority'              =>  $priority += 10,
 		    ) );
+		    $this->add_setting( 'subheading_3', array(
+			    'sanitize_callback'     =>  'tailor_sanitize_text',
+			    'default'               =>  '',
+		    ) );
+		    $this->add_control( 'subheading_3', array(
+			    'label'                 =>  __( 'Subheading 3 text', '' ),
+			    'type'                  =>  'text',
+			    'section'               =>  'general',
+			    'priority'              =>  $priority += 10,
+		    ) );
+
+		    $this->add_setting( 'mail_3', array(
+			    'sanitize_callback'     =>  'tailor_sanitize_text',
+			    'default'               =>  '',
+		    ) );
+		    $this->add_control( 'mail_3', array(
+			    'label'                 =>  __( 'Mail 3 text', '' ),
+			    'type'                  =>  'text',
+			    'section'               =>  'general',
+			    'priority'              =>  $priority += 10,
+		    ) );
+
+
 		    $this->add_setting( 'bgimg_3', array(
 		    	'sanitize_callback'		=>	'tailor_sanitize_text',
 			    'default'               =>  '',
